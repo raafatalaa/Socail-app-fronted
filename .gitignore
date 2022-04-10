@@ -6,6 +6,8 @@ package-lock
 package
 /.pnp
 .pnp.js
+/assets
+
 
 # testing
 /coverage
