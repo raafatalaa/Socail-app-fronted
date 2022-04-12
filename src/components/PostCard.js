@@ -17,7 +17,7 @@ export default function PostCard({body,image,userName,date}) {
                         </div>
                     </div>
                     <p class="text-justify">{body}</p>
-                    <div className="feed-image p-2 px-3"><img className="img-fluid img-responsive" src={image}/></div>
+                    <div className="feed-image p-2 px-3"><img className="img-fluid img-responsive" src={`url(${image})`}/></div>
                     <div className="d-flex justify-content-end socials p-2 py-3"><i className="fa fa-thumbs-up"></i><i className="fa fa-comments-o"></i><i className="fa fa-share"></i></div>
         </div>
     );
