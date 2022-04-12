@@ -27,6 +27,18 @@ body {
     cursor: pointer;
     text-transform: capitalize
 }
+.postcard{
+    width: 80%;
+    height: 250px;
+    background: rgb(224, 218, 218);
+    border-radius: .5rem;
+    box-shadow: 0 0 1rem rgba(117, 112, 112, 0.2);
+    padding: 2px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
 
 /***    Landing Page     ***/
 .main-title,
