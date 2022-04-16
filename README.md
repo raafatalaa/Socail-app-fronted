@@ -1,17 +1,16 @@
 # Logster - login/register-page-app
 
-> Simple login/register-page-app created with React js.
+> Simple Socail-app created with React js.
 
-Logster is a React app that has a Login, Register and Reset password features. This is just the Front-end of the app, no Back-end.
+Social-app is a React app that has a Login, Register, and Reset password features.
+Also has Browsing for other users' posts ,You also can find new friends, and browse your own profile 
+This is just the Front-end of the app, no Back-end.
 
 ## Table of contents
 * [Functionalities](#functionalities)
 * [Technologies](#technologies)
-* [Live App](#live-app)
 * [Packages & Libraries](#packages-&-libraries)
 * [Contributing](#contributing)
-* [Support](#support)
-* [Final Words](#final-words)
 * [License](#license)
 
 ## Functionalities
@@ -19,6 +18,9 @@ Logster is a React app that has a Login, Register and Reset password features. T
 * Login with username and password
 * Create an account
 * Reset password
+* See other users posts 
+* Search for new friends
+* Browse your own posts
 
 ## Technologies
 
@@ -26,9 +28,6 @@ Logster is a React app that has a Login, Register and Reset password features. T
 * HTML5
 * CSS3
 
-## Live App
-
-To view and test the app you can visit this [link](https://logsterapp.netlify.com/).
 
 ## Packages & Libraries
 
@@ -63,20 +62,6 @@ or
 ```
 .. happy Coding..!!
 
-
-
-## Support
-
-Reach out to me at one of the following places!
-
-- Website at <a href="https://izemspot.netlify.com" target="_blank">`izemspot.netlify.com`</a>
-- Gmail <a href="mailto:zmr.ilyas@gmail.com" target="_blank">`zmr.ilyas@gmail.com`</a>
-
-
-
-## Final Words
-
-If you like the app, please give it a star. It will mean a lot for me :)
 
 ## License
 
