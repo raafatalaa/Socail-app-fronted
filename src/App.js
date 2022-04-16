@@ -14,7 +14,8 @@ export default function App() {
 
     const [users,setUsers] = useState([]);
     const [posts,setPosts] = useState([]);
-    useEffect(async() => {
+    useEffect(() => {
+      const fetchData = async () => {
     try {
         const response = await fetch('http://localhost:5000/api/user', {
           method: 'GET',
@@ -46,12 +47,12 @@ export default function App() {
         }
     
         const result = await response.json();
-        console.log("aloooo   ",result)
         setPosts(result);
       } catch (err) {
         console.log(err);
       }
-
+    }
+    fetchData();
     },[]);
 
 

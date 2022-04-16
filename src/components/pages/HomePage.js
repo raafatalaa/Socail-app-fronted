@@ -1,14 +1,32 @@
-import React from 'react'
+import React,{useState} from 'react'
 import NavBar from '../NavBar.js'
 import PostsFeed from '../PostsFeed.js';
 import Users from '../Users.js';
+import Profile from './Profile.js';
 
 export default function HomePage({users,posts}) {
+    const [currPage,setCurrPage]=useState("posts");
+
+    const changePage=(page)=>{
+        setCurrPage(page);
+        console.log("page",currPage)
+    }
     return (
         <div>
-            <NavBar/>
-            {/* <PostsFeed posts = {posts}/> */}
-            <Users users= {users} posts = {posts}/>
+            <NavBar changePage={changePage}/>
+            {
+            (currPage === "posts")?(
+            <PostsFeed posts = {posts} />
+            )
+            :(
+             (currPage === "users")?(
+            <Users users= {users} posts = {posts}  />
+            )  :(
+                    <div>
+                        <Profile user={users[0]} posts={posts}/>  
+                    </div>
+            )
+            )}
         </div>
     )
 }
