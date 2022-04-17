@@ -2,8 +2,8 @@ import React from "react";
 import './UserCard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function UserCard({name,email,createdAt,id,test}) {
-  console.log("user card", name, email, createdAt, id);
+export default function UserCard({name,email,createdAt,id,test,tmp}) {
+   console.log("user card", name, email, createdAt, id,tmp);
     return(
         <div>
             <div className="card" onClick={() =>test(id)}>
@@ -12,7 +12,7 @@ export default function UserCard({name,email,createdAt,id,test}) {
                     <img
                       src="https://i.imgur.com/aoKusnD.jpg"
                       className="card-img-top"
-                      alt="photo"
+                      alt="user avatar"
                     />
                   </div>
                   <div> 

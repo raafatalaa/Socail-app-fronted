@@ -9,18 +9,17 @@ export default function HomePage({users,posts}) {
 
     const changePage=(page)=>{
         setCurrPage(page);
-        console.log("page",currPage)
     }
     return (
         <div>
             <NavBar changePage={changePage}/>
             {
             (currPage === "posts")?(
-            <PostsFeed posts = {posts} />
+                <PostsFeed posts = {posts} />
             )
             :(
-             (currPage === "users")?(
-            <Users users= {users} posts = {posts}  />
+                (currPage === "users")?(
+                    <Users users= {users} posts = {posts}  />
             )  :(
                     <div>
                         <Profile user={users[0]} posts={posts}/>  

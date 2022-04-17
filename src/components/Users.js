@@ -4,19 +4,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PostsFeed from "./PostsFeed";
 
 export default function Users ({users,posts}) {
-    const [user,setUser]=useState([]);
+    const [user,setUser]=useState(null);
     // const userIdChange=(id)=>{
     //     setUser(users.find(user=>user.id===id));  
     //    const post = posts.find(post => (post.createdBy === id));
     //    console.log("ya 3mmm",post,user)
     //  }
+    // console.log("user",user);
     const test = (id) => {
-        console.log("mahameho",id)
+        // console.log(users.filter(user => user.id === id));
         setUser(users.filter(user => user.id === id));
         const post = posts.filter(post => (post.postedBy === id));
-        console.log("ya 3mmm",post,user)
+         console.log("test",users.filter(user => user.id === id))
     }
-    console.log("hommmme: ",users);
      const usersComponent=users.map((user , i)=>{
         return <UserCard key ={users[i].id} name={users[i].name} email={users[i].email} createdAt={users[i].createdAt} id={users[i].id} test = {test}/>
       })  
@@ -35,13 +35,15 @@ export default function Users ({users,posts}) {
             {/* <!-- Second Half --> */}
             <div className=" bg-white h-md-100 loginarea">
                 {
-                    (user)?(
+                    (user === null)?(
                         <div>.</div>
                     ):(
                         <div style={{display:"flex",justifyContent : "center",flexWrap:"wrap",padding:"7px"}}>
-                            <UserCard key ={user.id} name={user.name} email={user.email} createdAt={user.createdAt} id={user.id}
+                            {console.log("return",user)}
+                            <UserCard key ={user[0].id} name={user[0].name} email={user[0].email} createdAt={user[0].createdAt} id={user[0].id} tmp={user}
                              style={{width:"5%", height:"3rem"}}/>
-                            <PostsFeed posts={posts.filter(posts => posts.postedBy === user.id)}/>
+                             {console.log("username",user.name)}
+                            <PostsFeed posts={posts.filter(posts => posts.postedBy === user[0].id)}/>
                         </div>
                     )
                 }

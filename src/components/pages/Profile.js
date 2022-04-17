@@ -12,7 +12,7 @@ export default function profile({user,posts}) {
                     <img
                       src="https://i.imgur.com/aoKusnD.jpg"
                       className="card-img-top"
-                      alt="photo"
+                      alt="user avatar"
                       style={{"width":"15rem"}}
                     />
                   </div>
